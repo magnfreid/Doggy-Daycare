@@ -1,0 +1,9 @@
+.registry ul {
+  width: 50vw;
+}
+
+@media (max-width: 600px) {
+  .registry ul {
+    width: 90vw;
+  }
+}

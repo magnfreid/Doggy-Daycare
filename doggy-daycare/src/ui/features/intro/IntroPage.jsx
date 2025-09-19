@@ -1,3 +1,5 @@
+import "./IntroPage.css";
+
 function IntroPage() {
   return (
     <>

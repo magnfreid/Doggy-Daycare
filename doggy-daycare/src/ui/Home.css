@@ -2,6 +2,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  width: 100vw;
 }
 
 .home header {
@@ -9,9 +10,8 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background-color: rgb(46, 68, 61);
+  background-color: rgb(0, 0, 0);
   width: 100%;
-  padding: 2rem;
 }
 
 .home h1 {
@@ -25,7 +25,7 @@
 }
 
 @media (max-width: 600px) {
-  .root nav {
+  .home nav {
     width: 90%;
   }
 }

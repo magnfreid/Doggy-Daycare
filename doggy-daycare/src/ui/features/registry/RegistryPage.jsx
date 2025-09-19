@@ -1,9 +1,26 @@
-function RegistryPage({ dogs, loading }) {
+import "./RegistryPage.css";
+import DogItem from "../../components/DogItem";
+
+function RegistryPage({ dogs, loading, error }) {
+  if (error)
+    return <div className="registry">{`Something went wrong: ${error}`}</div>;
+
+  if (loading)
+    return (
+      <div className="registry">
+        <p>Loading...</p>
+      </div>
+    );
+
   return (
     <>
       <div className="registry">
         <h1>Registry Page</h1>
-        <ul></ul>
+        <ul>
+          {dogs.map((dog) => (
+            <DogItem key={dog.chipNumber} dog={dog} />
+          ))}
+        </ul>
       </div>
     </>
   );
