@@ -11,12 +11,18 @@
 
   color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
+  background-color: rgba(241, 171, 113, 0.833);
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+
+  --colorWhite: rgba(255, 255, 255, 0.87);
+  --colorDark: rgb(99, 23, 0);
+  --colorCoffee: rgb(222, 179, 122);
+  --colorOrange: rgba(220, 113, 36, 0.768);
+  --colorLightOrange: rgba(247, 122, 32, 0.172);
 }
 
 /* a {

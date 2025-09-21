@@ -4,10 +4,14 @@
   list-style: none;
   justify-content: center;
   align-items: flex-start;
-  border: 1px solid salmon;
-  border-radius: 5px;
+
+  background-color: antiquewhite;
+  color: var(--colorDark);
+  border-radius: 15px;
   margin: 1rem 0rem;
   width: 100%;
+  font-family: monospace;
+  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.3);
 }
 
 .dog-item .top {
@@ -15,7 +19,17 @@
   justify-content: space-between;
   align-items: center;
   width: 100%;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
   padding: 0.5rem;
+  background-color: var(--colorLightOrange);
+  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.dog-item .name {
+  font-size: 20px;
+  color: var(--colorDark);
+  text-shadow: 4px 4px 10px #2121214d;
 }
 
 .dog-item .title {
@@ -27,4 +41,27 @@
 
 .dog-item .code {
   display: flex;
+}
+
+.dog-item .content {
+  padding: 0.5rem;
+  display: flex;
+  width: 100%;
+  font-size: 16px;
+}
+
+.dog-item .dog-info {
+  display: flex;
+  flex: 1;
+  width: 100%;
+  justify-content: space-between;
+}
+
+.dog-item .owner-info {
+  display: flex;
+  /* flex-direction: column; */
+  justify-content: flex-end;
+  gap: 5px;
+  flex: 1;
+  width: 100%;
 }

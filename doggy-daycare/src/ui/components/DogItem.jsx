@@ -22,12 +22,19 @@ function DogItem({ dog }) {
       </div>
 
       <div className="content">
-        <div className="code">
-          <TagIcon style={{ color: "blue" }} />
-          <p>{dog.chipNumber}</p>
+        <div className="dog-info">
+          <p>{dog.breed.charAt(0).toUpperCase() + dog.breed.slice(1)}</p>
+          <p>{dog.age < 2 ? `${dog.age} year old` : `${dog.age} years old`}</p>
+          <div className="code">
+            <TagIcon style={{ color: "teal" }} />
+            <p>{dog.chipNumber}</p>
+          </div>
         </div>
-        <p>{dog.breed.charAt(0).toUpperCase() + dog.breed.slice(1)}</p>
-        <p>{dog.age < 2 ? `${dog.age} year old` : `${dog.age} years old`}</p>
+        <div className="owner-info">
+          <p>{dog.owner.name}</p>
+          <p>{dog.owner.lastName}</p>
+          <p>{dog.owner.phoneNumber}</p>
+        </div>
       </div>
     </li>
   );

@@ -13,7 +13,6 @@ function ActivePage({ dogs, loading, error }) {
 
   return (
     <div className="active">
-      <h1>ActivePage</h1>
       <ul>
         {dogs
           .filter((dog) => dog.present === true)

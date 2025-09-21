@@ -15,7 +15,6 @@ function RegistryPage({ dogs, loading, error }) {
   return (
     <>
       <div className="registry">
-        <h1>Registry Page</h1>
         <ul>
           {dogs.map((dog) => (
             <DogItem key={dog.chipNumber} dog={dog} />
