@@ -1,4 +1,4 @@
-.list-page {
+.list-view {
   display: flex;
   flex-direction: column;
   height: 100%;
@@ -6,13 +6,19 @@
   align-items: center;
 }
 
-.list-page ul {
+.list-view ul {
   flex: 1;
   width: 75vw;
   max-height: 75vh;
   overflow-y: auto;
   scroll-behavior: smooth;
   padding: 0rem 1rem;
+}
+
+.list-view ul::after {
+  content: "";
+  display: block;
+  height: 4rem;
 }
 
 ul::-webkit-scrollbar {

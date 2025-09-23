@@ -1,25 +1,25 @@
-import FemaleIcon from "@mui/icons-material/Female";
-import MaleIcon from "@mui/icons-material/Male";
 import TagIcon from "@mui/icons-material/Tag";
 import "./DogItem.css";
-import StatusIndicator from "./StatusIndicator";
+import { useNavigate } from "react-router";
 
 function DogItem({ dog }) {
   const presentName = dog.present ? "present" : "absent";
+  const navigate = useNavigate();
   return (
-    <li className={`dog-item ${dog.sex} ${presentName}`}>
+    <li
+      className={`dog-item ${dog.sex} ${presentName}`}
+      onClick={() => navigate(`/dog/${dog.chipNumber}`)}
+    >
+      {/* <div className="img-container"> */}
+      {/* <img src={dog.img} alt="Image" /> */}
+      {/* </div> */}
+      {/* <div className="inner-wrapper"> */}
       {/* HEADER */}
+
       <div className="top">
         <div className="title">
           <p className="name">{dog.name}</p>
-
-          {/* {dog.sex === "female" ? (
-            <FemaleIcon style={{ color: "pink" }} />
-          ) : (
-            <MaleIcon style={{ color: "lightblue" }} />
-          )} */}
         </div>
-        {/* <StatusIndicator isPresent={dog.present} /> */}
       </div>
 
       <div className="content">
@@ -39,6 +39,7 @@ function DogItem({ dog }) {
           <p>{dog.owner.phoneNumber}</p>
         </div>
       </div>
+      {/* </div> */}
     </li>
   );
 }

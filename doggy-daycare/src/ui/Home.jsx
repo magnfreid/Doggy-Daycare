@@ -6,6 +6,7 @@ import { fetchDogData } from "../data/api";
 import Header from "./Header";
 import ActivePage from "./features/active/ActivePage";
 import RegistryPage from "./features/registry/RegistryPage";
+import DogInfoPage from "./features/dog-info/DogInfoPage";
 
 function Home() {
   const [dogs, setDogs] = useState([]);
@@ -37,6 +38,10 @@ function Home() {
               element={
                 <RegistryPage dogs={dogs} loading={loading} error={error} />
               }
+            />
+            <Route
+              path="/dog/:chipNumber"
+              element={<DogInfoPage dogs={dogs} />}
             />
           </Routes>
         </main>

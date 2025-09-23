@@ -51,17 +51,17 @@ function ListView({ dogs, loading, error }) {
   }
 
   if (error)
-    return <div className="list-page">{`Something went wrong: ${error}`}</div>;
+    return <div className="list-view">{`Something went wrong: ${error}`}</div>;
 
   if (loading)
     return (
-      <div className="list-page">
+      <div className="list-view">
         <p>Loading...</p>
       </div>
     );
 
   return (
-    <div className="list-page">
+    <div className="list-view">
       <SearchBar
         onSearch={(search) => setSearch(search)}
         onSortChange={(sort) => {

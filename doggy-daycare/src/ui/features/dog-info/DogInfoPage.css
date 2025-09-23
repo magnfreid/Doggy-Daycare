@@ -1,0 +1,11 @@
+.dog-info {
+  color: var(--color5);
+}
+
+.dog-info .chip-number {
+  display: flex;
+}
+
+.dog-info .back-button {
+  cursor: pointer;
+}
