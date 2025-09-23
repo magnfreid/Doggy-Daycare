@@ -90,18 +90,22 @@
   padding: 0.5rem;
   display: flex;
   align-items: center;
+  justify-content: start;
   width: 100%;
   font-size: 0.75rem;
   background-color: var(--color1);
+  /* border: 1px solid red; */
 }
 
 .dog-item .dog-info {
   display: flex;
+  flex-direction: column;
   flex: 1;
   gap: 5px;
-  width: 100%;
+  /* width: 100%; */
   justify-content: start;
-  align-items: center;
+  align-items: flex-start;
+  /* border: 1px solid blue; */
 }
 .dog-item .dog-info > * {
   flex: 1;
@@ -110,17 +114,21 @@
 
 .dog-item .owner-info {
   display: flex;
-  /* flex-direction: column; */
+  flex-direction: column;
   justify-content: flex-end;
   gap: 5px;
   flex: 1;
-  width: 100%;
+  /* width: 100%; */
   text-align: end;
+  /* border: 1px solid green; */
 }
 
 .dog-item .name-field {
   display: flex;
   gap: 5px;
+  justify-content: flex-end;
+  /* width: 100%; */
+  /* border: 1px solid purple; */
 }
 
 @media (max-width: 600px) {

@@ -40,7 +40,7 @@ ul::-webkit-scrollbar-thumb:hover {
 
 ul {
   scrollbar-width: thin;
-  scrollbar-color: #888 #f0f0f0;
+  scrollbar-color: #efc179 #ed37056d;
 }
 
 @media (max-width: 600px) {

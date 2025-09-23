@@ -2,7 +2,8 @@ header {
   display: flex;
   flex-direction: column;
   width: 100%;
-  background-color: var(--color3);
+  /* background-color: var(--color3); */
+  background-image: url("../assets/background2.jpg");
   align-items: center;
   gap: 0.5rem;
   box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.3);
@@ -12,12 +13,14 @@ header {
 
 header h1 {
   font-size: 3rem;
-  background-color: var(--color2);
-  color: var(--color5);
-  font-family: fantasy;
+  /* background-color: var(--color2); */
+  /* background-color: rgba(0, 0, 0, 0.1); */
+  color: var(--color1);
+  /* font-family: fantasy; */
+
   border-radius: 5px;
   text-shadow: 4px 4px 10px rgba(0, 0, 0, 0.3);
-  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.3);
+  /* box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.3); */
   padding: 0.5rem;
 }
 
