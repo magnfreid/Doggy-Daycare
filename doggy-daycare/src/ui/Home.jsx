@@ -4,7 +4,6 @@ import { useEffect, useState } from "react";
 import IntroPage from "./features/intro/IntroPage";
 import { fetchDogData } from "../data/api";
 import Header from "./Header";
-import ListPage from "./components/ListPage";
 import ActivePage from "./features/active/ActivePage";
 import RegistryPage from "./features/registry/RegistryPage";
 

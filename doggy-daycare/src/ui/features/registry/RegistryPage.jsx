@@ -1,10 +1,10 @@
-import ListPage from "../../components/ListPage";
+import ListView from "../../components/ListView";
 import "./RegistryPage.css";
 
 function RegistryPage({ dogs, loading, error }) {
   return (
     <div className="registry-page">
-      <ListPage dogs={dogs} loading={loading} error={error} />
+      <ListView dogs={dogs} loading={loading} error={error} />
     </div>
   );
 }
