@@ -5,13 +5,20 @@
   justify-content: center;
   align-items: flex-start;
 
-  background-color: antiquewhite;
-  color: var(--colorDark);
-  border-radius: 15px;
+  background-color: var(--color1);
+  color: var(--color5);
+  /* border-radius: 15px; */
   margin: 1rem 0rem;
+  border-bottom: 3px solid var(--color4);
+  border-left: 20px solid var(--color4);
   width: 100%;
   font-family: monospace;
-  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.3);
+  box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.3);
+}
+
+.dog-item:hover {
+  scale: 1.01;
+  cursor: pointer;
 }
 
 .dog-item .top {
@@ -19,16 +26,32 @@
   justify-content: space-between;
   align-items: center;
   width: 100%;
-  border-top-left-radius: 15px;
-  border-top-right-radius: 15px;
+  border-bottom: 1px solid var(--color5);
+  /* border-top-left-radius: 15px;
+  border-top-right-radius: 15px; */
   padding: 0.5rem;
-  background-color: var(--colorLightOrange);
-  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.3);
+  background-color: var(--colorTint);
+  /* box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.3); */
+}
+
+.dog-item.female .top {
+  border-left: 8px solid rgb(255, 165, 180);
+}
+
+.dog-item.male .top {
+  border-left: 8px solid rgb(129, 217, 247);
+}
+
+.dog-item.present .top {
+  border-right: 8px solid rgb(122, 251, 122);
+}
+.dog-item.absent .top {
+  border-right: 8px solid rgb(254, 75, 75);
 }
 
 .dog-item .name {
-  font-size: 20px;
-  color: var(--colorDark);
+  font-size: 1rem;
+  color: var(--color5);
   text-shadow: 4px 4px 10px #2121214d;
 }
 
@@ -47,14 +70,20 @@
   padding: 0.5rem;
   display: flex;
   width: 100%;
-  font-size: 16px;
+  font-size: 0.75rem;
+  background-color: var(--color1);
 }
 
 .dog-item .dog-info {
   display: flex;
   flex: 1;
+  gap: 5px;
   width: 100%;
-  justify-content: space-between;
+  justify-content: start;
+}
+.dog-item .dog-info > * {
+  flex: 1;
+  text-align: left;
 }
 
 .dog-item .owner-info {
@@ -64,4 +93,24 @@
   gap: 5px;
   flex: 1;
   width: 100%;
+  text-align: end;
+}
+
+.dog-item .name-field {
+  display: flex;
+  gap: 5px;
+}
+
+@media (max-width: 600px) {
+  .dog-item .dog-info {
+    flex-direction: column;
+  }
+  .dog-item .owner-info {
+    flex-direction: column;
+    align-items: flex-end;
+  }
+
+  .dog-item {
+    border-left: 10px solid var(--color4);
+  }
 }

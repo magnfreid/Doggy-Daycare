@@ -1,42 +1,55 @@
 header {
   display: flex;
-  width: 95vw;
-  border-radius: 10px;
-  height: 175px;
-  background-color: antiquewhite;
+  flex-direction: column;
+  width: 100%;
+  background-color: var(--color3);
   align-items: center;
-  object-fit: fill;
-  margin: 1rem 0rem;
+  gap: 0.5rem;
   box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.3);
+  padding: 1rem;
+  margin-bottom: 1rem;
 }
 
 header h1 {
-  font-size: 48px;
-  background-color: var(--colorCoffee);
-  /* background-color: rgb(179, 152, 117); */
-  color: var(--colorWhite);
-  padding: 1rem;
-  font-family: monospace;
-  border-end-end-radius: 10px;
-  border-start-end-radius: 10px;
+  font-size: 3rem;
+  background-color: var(--color2);
+  color: var(--color5);
+  font-family: fantasy;
+  border-radius: 5px;
   text-shadow: 4px 4px 10px rgba(0, 0, 0, 0.3);
+  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.3);
+  padding: 0.5rem;
+}
 
-  /* box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.3); */
+header nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
 }
 
 header nav a {
   font-family: monospace;
-  font-size: 22px;
+  font-size: 1rem;
   text-decoration: none;
-  color: var(--colorCoffee);
-  background-color: var(--colorWhite);
-  font-weight: 600;
-  border-radius: 12px;
+  color: var(--color4);
+  background-color: var(--color1);
+  border-radius: 5px;
+  font-weight: 400;
   padding: 0.5rem;
   box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.3);
 }
 
 header nav a:hover {
-  background-color: var(--colorOrange);
-  color: var(--colorWhite);
+  background-color: var(--color4);
+  color: var(--color1);
+}
+
+@media (max-width: 600px) {
+  header h1 {
+    font-size: 1.5rem;
+  }
+  header nav a {
+    font-size: 0.75rem;
+  }
 }

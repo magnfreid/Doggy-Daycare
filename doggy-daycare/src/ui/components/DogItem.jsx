@@ -5,20 +5,21 @@ import "./DogItem.css";
 import StatusIndicator from "./StatusIndicator";
 
 function DogItem({ dog }) {
+  const presentName = dog.present ? "present" : "absent";
   return (
-    <li className="dog-item">
+    <li className={`dog-item ${dog.sex} ${presentName}`}>
       {/* HEADER */}
       <div className="top">
         <div className="title">
           <p className="name">{dog.name}</p>
 
-          {dog.sex === "female" ? (
+          {/* {dog.sex === "female" ? (
             <FemaleIcon style={{ color: "pink" }} />
           ) : (
             <MaleIcon style={{ color: "lightblue" }} />
-          )}
+          )} */}
         </div>
-        <StatusIndicator isPresent={dog.present} />
+        {/* <StatusIndicator isPresent={dog.present} /> */}
       </div>
 
       <div className="content">
@@ -31,8 +32,10 @@ function DogItem({ dog }) {
           </div>
         </div>
         <div className="owner-info">
-          <p>{dog.owner.name}</p>
-          <p>{dog.owner.lastName}</p>
+          <div className="name-field">
+            <p>{dog.owner.name}</p>
+            <p>{dog.owner.lastName}</p>
+          </div>
           <p>{dog.owner.phoneNumber}</p>
         </div>
       </div>
