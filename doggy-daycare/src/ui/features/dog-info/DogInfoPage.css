@@ -1,4 +1,6 @@
 .dog-info {
+  display: flex;
+  flex-direction: column;
   color: var(--color5);
 }
 

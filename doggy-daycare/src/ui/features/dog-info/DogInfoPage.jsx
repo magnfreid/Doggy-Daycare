@@ -20,6 +20,7 @@ function DogInfoPage({ dogs }) {
       <p>Ägare:</p>
       <p>{dog.owner.name}</p>
       <p>{dog.owner.lastName}</p>
+      <a href={`tel:${dog.owner.phoneNumber}`}>{dog.owner.phoneNumber}</a>
       <img src={dog.img} alt="Dog portrait" />
     </div>
   );

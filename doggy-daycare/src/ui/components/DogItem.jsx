@@ -10,12 +10,6 @@ function DogItem({ dog }) {
       className={`dog-item ${dog.sex} ${presentName}`}
       onClick={() => navigate(`/dog/${dog.chipNumber}`)}
     >
-      {/* <div className="img-container"> */}
-      {/* <img src={dog.img} alt="Image" /> */}
-      {/* </div> */}
-      {/* <div className="inner-wrapper"> */}
-      {/* HEADER */}
-
       <div className="top">
         <div className="title">
           <p className="name">{dog.name}</p>
