@@ -1,4 +1,4 @@
-.dog-item {
+.registry-list-item {
   display: flex;
   flex-direction: column;
   list-style: none;
@@ -7,86 +7,64 @@
 
   background-color: var(--color1);
   color: var(--color5);
-  /* border-radius: 15px; */
-  margin: 1rem 0rem;
+  margin: 1rem auto;
   border-bottom: 3px solid var(--color4);
   border-left: 20px solid var(--color4);
   width: 100%;
-
+  max-width: 800px;
   font-family: monospace;
   box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.3);
 }
 
-.dog-item:hover {
+.registry-list-item:hover {
   scale: 1.01;
   cursor: pointer;
 }
 
-/* .dog-item .img-container {
-  background-color: var(--color5);
-  height: 100%;
-} */
-
-/* .dog-item img {
-  height: 75px;
-  width: 75px;
-  object-fit: cover;
-  border: 3px solid var(--color5);
-}
-
-.dog-item .inner-wrapper {
-  display: flex;
-  flex-direction: column;
-  flex: 1;
-} */
-
-.dog-item .top {
+.registry-list-item .top {
   display: flex;
   justify-content: space-between;
   align-items: center;
   width: 100%;
   border-bottom: 1px solid var(--color5);
-  /* border-top-left-radius: 15px;
-  border-top-right-radius: 15px; */
   padding: 0.5rem;
   background-color: var(--colorTint);
-  /* box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.3); */
 }
 
-.dog-item.female .top {
-  border-left: 8px solid rgb(255, 165, 180);
+.registry-list-item.female .top {
+  border-left: 8px solid var(--colorPink);
 }
 
-.dog-item.male .top {
-  border-left: 8px solid rgb(129, 217, 247);
+.registry-list-item.male .top {
+  border-left: 8px solid var(--colorLightBlue);
 }
 
-.dog-item.present .top {
-  border-right: 8px solid rgb(122, 251, 122);
+.registry-list-item.present .top {
+  border-right: 8px solid var(--colorGreen);
 }
-.dog-item.absent .top {
-  border-right: 8px solid rgb(254, 75, 75);
+.registry-list-item.absent .top {
+  border-right: 8px solid var(--colorRed);
 }
 
-.dog-item .name {
+.registry-list-item .name {
   font-size: 1rem;
   color: var(--color5);
   text-shadow: 4px 4px 10px #2121214d;
 }
 
-.dog-item .title {
+.registry-list-item .title {
   display: flex;
   justify-content: flex-start;
   align-items: center;
   width: 100%;
 }
 
-.dog-item .code {
+.registry-list-item .code {
   display: flex;
   align-items: center;
 }
 
-.dog-item .content {
+.registry-list-item .content {
   padding: 0.5rem;
   display: flex;
   align-items: center;
@@ -94,53 +72,46 @@
   width: 100%;
   font-size: 0.75rem;
   background-color: var(--color1);
-  /* border: 1px solid red; */
 }
 
-.dog-item .dog-info {
+.registry-list-item .dog-info {
   display: flex;
   flex-direction: column;
   flex: 1;
   gap: 5px;
-  /* width: 100%; */
   justify-content: start;
   align-items: flex-start;
-  /* border: 1px solid blue; */
 }
-.dog-item .dog-info > * {
+.registry-list-item .dog-info > * {
   flex: 1;
   text-align: left;
 }
 
-.dog-item .owner-info {
+.registry-list-item .owner-info {
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
   gap: 5px;
   flex: 1;
-  /* width: 100%; */
   text-align: end;
-  /* border: 1px solid green; */
 }
 
 .dog-item .name-field {
   display: flex;
   gap: 5px;
   justify-content: flex-end;
-  /* width: 100%; */
-  /* border: 1px solid purple; */
 }
 
 @media (max-width: 600px) {
-  .dog-item .dog-info {
+  .registry-list-item .dog-info {
     flex-direction: column;
   }
-  .dog-item .owner-info {
+  .registry-list-item .owner-info {
     flex-direction: column;
     align-items: flex-end;
   }
 
-  .dog-item {
+  .registry-list-item {
     border-left: 10px solid var(--color4);
   }
 }

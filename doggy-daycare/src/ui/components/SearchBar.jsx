@@ -1,6 +1,14 @@
 import { useState } from "react";
 import "./SearchBar.css";
-import { FormControl, InputLabel, Select, MenuItem } from "@mui/material";
+import {
+  FormControl,
+  InputLabel,
+  Select,
+  MenuItem,
+  IconButton,
+} from "@mui/material";
+import ArrowUpwardIcon from "@mui/icons-material/ArrowUpward";
+import ArrowDownwardIcon from "@mui/icons-material/ArrowDownward";
 
 function SearchBar({ onSearch, onSortChange, onReverseSort }) {
   const [sortBy, setSortBy] = useState("name");
@@ -26,8 +34,26 @@ function SearchBar({ onSearch, onSortChange, onReverseSort }) {
         onChange={(event) => onSearch(event.target.value)}
       />
       <div className="sort">
-        <FormControl fullWidth variant="outlined" size="small">
-          <InputLabel id="sort-label">Sortera efter</InputLabel>
+        <FormControl
+          fullWidth
+          variant="outlined"
+          size="small"
+          sx={{
+            backgroundColor: "#f5f5f5", // background for the select
+            borderRadius: 1,
+          }}
+        >
+          <InputLabel
+            id="sort-label"
+            sx={{
+              backgroundColor: "#f5f5f5",
+              px: 0.5,
+              borderRadius: 0.5,
+              border: "0.5px solid #2a2a2aff",
+            }}
+          >
+            Sortera efter:
+          </InputLabel>
           <Select
             labelId="sort-label"
             value={sortBy}
@@ -40,9 +66,16 @@ function SearchBar({ onSearch, onSortChange, onReverseSort }) {
             <MenuItem value="active">Aktiv</MenuItem>
           </Select>
         </FormControl>
-        <button onClick={() => handleReverseChange()}>
-          {reversed ? "⬆" : "⬇"}
-        </button>
+
+        <IconButton
+          onClick={handleReverseChange}
+          sx={{
+            backgroundColor: "#eaeaeaff", // background for the button
+            "&:hover": { backgroundColor: "#ffffff99" },
+          }}
+        >
+          {reversed ? <ArrowUpwardIcon /> : <ArrowDownwardIcon />}
+        </IconButton>
       </div>
     </div>
   );

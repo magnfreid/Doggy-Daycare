@@ -1,13 +1,13 @@
 import TagIcon from "@mui/icons-material/Tag";
-import "./DogItem.css";
+import "./RegistryListItem.css";
 import { useNavigate } from "react-router";
 
-function DogItem({ dog }) {
+function RegistryListItem({ dog }) {
   const presentName = dog.present ? "present" : "absent";
   const navigate = useNavigate();
   return (
     <li
-      className={`dog-item ${dog.sex} ${presentName}`}
+      className={`registry-list-item ${dog.sex} ${presentName}`}
       onClick={() => navigate(`/dog/${dog.chipNumber}`)}
     >
       <div className="top">
@@ -38,4 +38,4 @@ function DogItem({ dog }) {
   );
 }
 
-export default DogItem;
+export default RegistryListItem;

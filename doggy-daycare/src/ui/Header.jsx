@@ -1,15 +1,30 @@
-import { Link } from "react-router";
+import { Link, NavLink } from "react-router";
 import logo from "../assets/logo.jpg";
 import "./Header.css";
 
 function Header() {
   return (
     <header>
-      <h1>Doggy Daycare</h1>
+      <h1>Beatas Hunddagis</h1>
       <nav>
-        <Link to={"/"}>Start</Link>
-        <Link to={"/active"}>Aktiva</Link>
-        <Link to={"/registry"}>Register</Link>
+        <NavLink
+          to={"/"}
+          className={({ isActive }) => (isActive ? "active" : "")}
+        >
+          Start
+        </NavLink>
+        <NavLink
+          to={"/active"}
+          className={({ isActive }) => (isActive ? "active" : "")}
+        >
+          Gäster
+        </NavLink>
+        <NavLink
+          to={"/registry"}
+          className={({ isActive }) => (isActive ? "active" : "")}
+        >
+          Register
+        </NavLink>
       </nav>
     </header>
   );

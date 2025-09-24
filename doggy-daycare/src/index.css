@@ -24,4 +24,8 @@
   --color2: rgb(201, 201, 201);
   --color1: rgb(237, 242, 245);
   --colorTint: rgba(49, 139, 250, 0.07);
+  --colorPink: rgb(255, 165, 180);
+  --colorLightBlue: rgb(129, 217, 247);
+  --colorGreen: rgb(122, 251, 122);
+  --colorRed: rgb(254, 75, 75);
 }

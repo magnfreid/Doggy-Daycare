@@ -8,7 +8,6 @@ header {
   gap: 0.5rem;
   box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.3);
   padding: 1rem;
-  margin-bottom: 1rem;
 }
 
 header h1 {
@@ -16,7 +15,8 @@ header h1 {
   /* background-color: var(--color2); */
   /* background-color: rgba(0, 0, 0, 0.1); */
   color: var(--color1);
-  /* font-family: fantasy; */
+  font-family: fantasy;
+  text-decoration: underline;
 
   border-radius: 5px;
   text-shadow: 4px 4px 10px rgba(0, 0, 0, 0.3);
@@ -28,7 +28,7 @@ header nav {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 1rem;
+  gap: 2rem;
 }
 
 header nav a {
@@ -43,14 +43,17 @@ header nav a {
   box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.3);
 }
 
-header nav a:hover {
-  background-color: var(--color4);
+header nav a.active {
+  background-color: var(--color3);
   color: var(--color1);
+}
+
+header nav a:hover {
 }
 
 @media (max-width: 600px) {
   header h1 {
-    font-size: 1.5rem;
+    font-size: 2rem;
   }
   header nav a {
     font-size: 0.75rem;
