@@ -19,7 +19,7 @@ function RegistryListItem({ dog }) {
       <div className="content">
         <div className="dog-info">
           <p>{dog.breed.charAt(0).toUpperCase() + dog.breed.slice(1)}</p>
-          <p>{dog.age < 2 ? `${dog.age} year old` : `${dog.age} years old`}</p>
+          <p>{`${dog.age} år`}</p>
           <div className="code">
             <TagIcon style={{ color: "teal" }} />
             <p>{dog.chipNumber}</p>

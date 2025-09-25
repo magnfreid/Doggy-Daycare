@@ -1,12 +1,12 @@
 import "./RegistryPage.css";
-import RegistryListItem from "../../components/RegistryListItem";
+import RegistryListItem from "../../components/list-items/RegistryListItem";
 import SearchBar from "../../components/SearchBar";
 import { useEffect, useState } from "react";
 import Loading from "../../components/Loading";
 
 function RegistryPage({ dogs, loading, error }) {
   const [search, setSearch] = useState("");
-  const [filteredDogs, setFilteredDogs] = useState([]);
+  const [displayedDogs, setDisplayedDogs] = useState([]);
   const [sortBy, setSortBy] = useState("name");
   const [reversed, setReversed] = useState(false);
 
@@ -29,8 +29,8 @@ function RegistryPage({ dogs, loading, error }) {
     }
     updatedDogs = sortDogs(updatedDogs, sortBy);
     reversed
-      ? setFilteredDogs(updatedDogs.reverse())
-      : setFilteredDogs(updatedDogs);
+      ? setDisplayedDogs(updatedDogs.reverse())
+      : setDisplayedDogs(updatedDogs);
   }, [dogs, search, sortBy, reversed]);
 
   function sortDogs(dogs, sortBy) {
@@ -70,7 +70,7 @@ function RegistryPage({ dogs, loading, error }) {
         }}
       />
       <ul>
-        {filteredDogs.map((dog) => (
+        {displayedDogs.map((dog) => (
           <RegistryListItem key={dog.chipNumber} dog={dog} />
         ))}
       </ul>

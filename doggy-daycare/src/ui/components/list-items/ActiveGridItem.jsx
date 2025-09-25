@@ -1,5 +1,5 @@
 import "./ActiveGridItem.css";
-import placeholder from "../../assets/placeholder.png";
+import placeholder from "../../../assets/placeholder.png";
 import { useNavigate } from "react-router";
 function ActiveGridItem({ dog }) {
   const navigate = useNavigate();

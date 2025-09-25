@@ -1,4 +1,4 @@
-import ActiveGridItem from "../../components/ActiveGridItem";
+import ActiveGridItem from "../../components/list-items/ActiveGridItem";
 import Loading from "../../components/Loading";
 import "./ActivePage.css";
 
