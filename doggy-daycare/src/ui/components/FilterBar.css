@@ -1,0 +1,10 @@
+.filter-bar {
+  display: flex;
+  width: 90%;
+  max-width: 400px;
+  margin-bottom: 1rem;
+}
+
+.filter-bar button {
+  padding: 0.25rem;
+}

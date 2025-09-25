@@ -24,12 +24,6 @@
   padding: 0rem 1rem;
 }
 
-.registry ul::after {
-  content: "";
-  display: block;
-  height: 4rem;
-}
-
 .registry ul::-webkit-scrollbar {
   width: 8px;
 }

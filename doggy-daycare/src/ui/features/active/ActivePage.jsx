@@ -3,6 +3,7 @@ import Loading from "../../components/Loading";
 import "./ActivePage.css";
 
 function ActivePage({ dogs, loading, error }) {
+  const activeDogs = dogs.filter((dog) => dog.present === true);
   if (error)
     return <div className="registry">{`Something went wrong: ${error}`}</div>;
 
@@ -10,10 +11,9 @@ function ActivePage({ dogs, loading, error }) {
 
   return (
     <div className="active">
-      <h1>Nuvarande gäster</h1>
+      <h1>{`Nuvarande gäster (${activeDogs.length})`}</h1>
       <ul>
-        {dogs
-          .filter((dog) => dog.present === true)
+        {activeDogs
           .sort((a, b) => a.name.localeCompare(b.name))
           .map((dog) => (
             <ActiveGridItem key={dog.chipNumber} dog={dog} />

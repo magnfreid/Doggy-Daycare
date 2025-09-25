@@ -39,7 +39,7 @@ function SearchBar({ onSearch, onSortChange, onReverseSort }) {
           variant="outlined"
           size="small"
           sx={{
-            backgroundColor: "#f5f5f5", // background for the select
+            backgroundColor: "#f5f5f5",
             borderRadius: 1,
           }}
         >
@@ -70,7 +70,7 @@ function SearchBar({ onSearch, onSortChange, onReverseSort }) {
         <IconButton
           onClick={handleReverseChange}
           sx={{
-            backgroundColor: "#eaeaeaff", // background for the button
+            backgroundColor: "#eaeaeaff",
             "&:hover": { backgroundColor: "#ffffff99" },
           }}
         >
