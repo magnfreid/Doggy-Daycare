@@ -42,7 +42,7 @@ function FilterBar({ breeds, filters, onFilterChange }) {
           }}
         >
           {breeds
-            .sort((a, b) => a.breed - b.breed)
+            .sort((a, b) => a.breed.localeCompare(b.breed))
             .map((entry) => (
               <MenuItem key={entry.breed} value={entry.breed}>
                 <ListItemText
