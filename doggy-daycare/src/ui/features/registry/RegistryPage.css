@@ -22,6 +22,7 @@
   overflow-y: auto;
   scroll-behavior: smooth;
   padding: 0rem 1rem;
+  padding-bottom: 16rem;
 }
 
 .registry ul::-webkit-scrollbar {
