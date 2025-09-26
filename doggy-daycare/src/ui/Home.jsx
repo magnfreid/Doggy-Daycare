@@ -14,7 +14,7 @@ function Home() {
   const [error, setError] = useState(null);
 
   useEffect(() => {
-    fetchDogData(true)
+    fetchDogData()
       .then((data) => setDogs(data))
       .catch((error) => setError(error))
       .finally(() => setLoading(false));
